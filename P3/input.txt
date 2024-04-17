@@ -1,0 +1,13 @@
+P 1 Monday
+P 2 Tuesday
+P 3 Wednesday
+S
+P 4 Thursday
+P 5 Friday
+P 6 Saturday
+D 6
+S
+K
+G 1
+G 5
+R
