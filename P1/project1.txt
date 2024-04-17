@@ -1,4 +1,3 @@
-
 Project #1
 
 Due Dates:  Saturday, February 24 at 11:59pm 
@@ -94,7 +93,3 @@ Details:
 
       Note it is important to follow this exactly, so the grading can be automated.
       We will run "java Namelist < input.txt" to grade your program.       
-        
-Submit to eLearning:
-  NameList.java
-
