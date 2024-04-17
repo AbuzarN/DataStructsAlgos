@@ -1,0 +1,100 @@
+
+Project #3
+
+Due Dates:  Saturday, April 6 at 11:59pm 
+
+Submit:    eLearning
+
+Late Policy:  24-hour late period, then zero points
+
+Instructions: This is an individual assignment.  All work should be your own.
+
+
+
+Objective:
+
+     Work with hash tables by creating a hash table using linear probing.
+
+
+Description:
+
+     Hashing will be used to map keys to associated values.  This is similar to Java's own Hashtable class.
+     You should review the API documentation on Java's Hashtable.
+
+     Create a generic class called LinearProbingHashTable<K,V>.
+       K is the type of the key 
+       V is the type of the value to be associated with the key
+     For example, to map days of the week numbers to names, we might let 0 be the key for Sunday, 1 for Monday, etc.
+
+     It should contain a private static class, Entry<K,V>, which contains both K and V.
+
+     Because Java cannot create an array of a generic class, create the
+     array for the table like this:  
+
+       Entry<K,V> table[];      // declare generic
+       table = new Entry[size]; // create as non-generic
+
+     Note that this will generate a warning message when compiled.
+ 
+     Your class should have the following methods.  The methods should 
+     all operate on the object making the call (none are static).  
+
+     Perform checking of the parameters and throw exceptions where 
+     appropriate.
+
+     You may use code from the textbook, but all other code must be
+     your own.
+
+
+   15 points
+   a) public boolean put(K key, V value)
+         inserts entry, rehashes if half full,
+         can re-use deleted entries, throws
+         exception if key is null, returns
+         true if inserted, false if duplicate.
+
+   15 points
+   b) public V get(K key)
+          returns value for key, or null if not found
+
+   15 points
+   c) public boolean delete(K key)
+          marks the entry deleted but leaves it there,
+          returns true if deleted, false if not found
+
+   15 points
+   d) public Set<K> keySet()
+          returns a set of keys in the table
+
+   15 points
+   e) private void rehash( )
+          doubles the table size, hashes everything to
+          the new table, omitting items marked deleted
+
+   15 points
+   f) public String toString()
+          returns a formatted string of the hash table,
+          where k, v is the key and value at this location:
+               0  k, v
+               1  
+               2  k, v   deleted
+               ...
+  
+
+   10 points
+   g) public static void main(String args[])
+        creates a LinearProbingHashTable<Integer, String>    
+        reads input and produces output as seen in this example:
+     
+      Input         Expected result
+       P 1 Monday   Inserts value Monday with key 1
+       G 1          Outputs value for 1 which is Monday
+       D 1          Removes the key 1 and value Monday
+       K            Outputs each key with a space in between
+       R            Outputs old table size, a space, and the new table size
+       S            Displays the list using the toString method
+
+      Note it is important to follow this exactly, so the grading can be automated.
+      We will run "java LinearProbingHashTable < input.txt" to grade your program. 
+
+
