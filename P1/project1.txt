@@ -1,0 +1,100 @@
+
+Project #1
+
+Due Dates:  Saturday, February 24 at 11:59pm 
+
+Submit:    eLearning
+
+Late Policy:  24-hour late period, then zero points
+
+Instructions: This is an individual assignment.  Answers should be your own work.
+              You are expected to code this yourself from scratch by thinking 
+              through the requirements and design, then writing the code.
+
+
+
+Introduction:
+
+   This project creates a custom linked list structure.  
+   It serves as an exercise in working with linked lists and nodes.
+   
+
+
+Overview:
+
+   Suppose the names "Bob", "Dan", and "Ben", are added, the result is:
+
+                -----     -----     -----     -----     -----
+       head -->|  B  |-->| Ben |-->| Bob |-->|  D  |-->| Dan |--
+                -----     -----     -----     -----     -----   |
+                                                               ---
+                                                                - 
+                                                    
+
+   If the names "Deb" and "Sarah" are added, it looks like this:
+
+                -----     -----     -----     -----     -----     -----      -----     -----
+       head -->|  B  |-->| Ben |-->| Bob |-->|  D  |-->| Dan |-->| Deb |--> |  S  |-->|Sarah|--
+                -----     -----     -----     -----     -----     -----      -----     -----   |
+                                                                                              ---
+                                                                                               - 
+
+   If "Deb" and "Sarah" are deleted, the list should look like the first list again.
+
+
+Details:
+
+   Create a Java class called NameList (not generic) that stores names and implements the
+   structure shown above.  Note this structure is singly-linked with no sentinel nodes.
+   The node class should be a private static class nested inside the Namelist class.
+
+   Note that the names are kept in sorted order.  Letter nodes are always uppercase.
+   Names may begin with a lowercase letter, but ordering is case insensitive.  For example, 
+   if Dewy, Donna, Deb, deWitt, Dan are added, they would all be placed in the D list in 
+   the order Dan, Deb, deWitt, Dewy, Donna.
+
+   You may *not* use Java's LinkedList class.  You should create your own nodes and
+   link them together as shown in the illustration.  
+
+   Your class should support the following methods.  
+   Methods should be implemented efficiently, avoiding unnecessary steps.
+   Parameters, return values, and error handling are part of the design.
+
+   20 points
+   add - Adds a new name.  Names must be at least 2 characters long.  Adds the letter node if not already present.
+
+   20 points
+   remove - Removes a name.  If the name is the last one for a letter, the letter
+             node should also be removed.
+
+   20 points
+   removeLetter - Removes a letter and all names for that letter.  
+
+   20 points
+   find - Finds a name by traversing the nodes, returns a boolean.
+
+   10 points   
+   toString - Returns a string of the list formatted as shown below using the first list above as an example:
+
+       B
+         Ben
+         Bob
+       D
+         Dan      
+
+   10 points
+   main - reads input and produces output as seen in this example:
+
+      Input      Expected result
+       A Joe      Adds the name Joe
+       R Joe      Removes the name Joe
+       R J        Removes the J node and all its names
+       C Joe      Finds the name Joe, outputs Found or Not Found
+       S          Displays the list using the toString method
+
+      Note it is important to follow this exactly, so the grading can be automated.
+      We will run "java Namelist < input.txt" to grade your program.       
+        
+Submit to eLearning:
+  NameList.java
+
