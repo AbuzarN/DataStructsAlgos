@@ -1,0 +1,91 @@
+Project #2
+
+Due Dates:  Saturday, March 9 at 11:59pm 
+
+Submit:    eLearning
+
+Late Policy:  24-hour late period, then zero points
+
+Instructions: This is an individual assignment.  Answers should be your own work.
+              You are expected to code this yourself from scratch by thinking 
+              through the requirements and design, then writing the code.  However,
+              you may use code from the author's BinarySearchTree.
+
+
+Introduction:
+
+   In this project you will create a binary search tree.
+
+
+Description:
+
+   Create a class called MySearchTree.  MySearchTree will implement a binary 
+   search tree.  MySearchTree will be a generic class storing a value of the
+   generic type.  The node class should be a private static class nested inside
+   the MySearchTree class.
+
+   The methods should be implemented efficiently, avoiding unnecessary steps.
+   Parameters, return values, and error handling are part of the design.
+
+   It should have the following methods.  The methods should 
+   all operate on the object making the call (none are static).  
+
+   All of the methods should use recursion (except for main).
+
+   15 points
+   a) add
+       Adds a node to the tree containing the passed value.  
+
+   15 points
+   b) find
+        Returns true if the value passed is in the tree.
+
+   15 points
+   c) leafCount
+        Returns the count of all of the leaves in the tree.
+
+   15 points
+   d) parentCount
+        Returns the count of all of the parents in the tree.
+
+   15 points
+   e) twoChildCount
+        Returns the count of parents having two children
+
+   15 points
+   i) preOrderPrint
+        Prints node values using a preorder traversal.
+
+   10 points
+   j) main - creates a MySearchTree<String>, then reads input and produces output as seen in this example:
+
+      Input      Expected result
+       A Joe      Adds the name Joe
+       C Joe      Finds the name Joe, outputs Found or Not Found
+       L          Outputs the leaf count
+       P          Outputs the parent count
+       T          Outputs the count of parents having two children
+       D          Outputs the list using a preorder traversal, with a space between strings
+
+      Note it is important to follow this exactly, so the grading can be automated.
+      We will run "java MySearchTree < input.txt" to grade your program.
+
+      Sample input:
+      A Joe
+      A Bob
+      A Tim
+      C Tim
+      L
+      P
+      T
+      D
+
+      Expected output:
+      Found
+      2
+      1
+      1
+      Joe Bob Tim
+   
+Submit to eLearning:
+   MySearchTree.java
